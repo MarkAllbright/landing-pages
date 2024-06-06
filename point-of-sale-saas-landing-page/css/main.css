@@ -1,0 +1,163 @@
+.font-inter {
+	font-family: 'Inter', sans-serif;
+}
+
+.banner-bg {
+	background-color: #5423e7;
+}
+.text-primary {
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.text-secondry {
+	color: #121217;
+}
+
+.text-blue-violet {
+	color: #7047eb;
+}
+
+.text-25 {
+	font-size: 25px;
+}
+
+.img-banner-bg {
+	background-image: url(../src/images/banner-bg.jpg);
+	background-position-x: 48.6vw;
+	background-position-y: 0px; 
+}
+
+.accordion1 {
+  cursor: pointer;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* Change color of the heading and icon (on hover and click) */
+
+
+/* Add "plus" sign (+) after Accordion */
+
+
+/* Add "minus" sign (-) after Accordion (when accordion is active) */
+
+
+/* Style the accordion panel */
+.accordion-panel {
+	color: #6c6c89;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+@media (max-width: 1023px) {
+	/* .img-banner-bg {
+		background-position-x: 550px;
+	} */
+}
+.btn-animation{
+	transition: 0.5s transform linear;
+}
+.btn-animation:hover{
+	transform: scale(1.1);
+}
+.odd-logo-animation{
+	animation-name: odd-logo;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+@keyframes odd-logo{
+	0%{scale: 1.1 1.1;}
+	50%{scale: 0.90 0.90}
+	100%{scale: 1.1 1.1;}
+}
+.even-logo-animation{
+	animation-name: even-logo;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+@keyframes even-logo{
+	0%{scale: 0.90 0.90;}
+	50%{scale: 1.1 1.1}
+	100%{scale: 0.90 0.90;}
+}
+.left-animation{
+	position: relative;
+	z-index: -99;
+	transform: translateX(-150px);
+	transition: 1s all ease;
+	transition-timing-function: ease-in-out;
+	opacity: 0;
+}
+.left-animation.active{
+	transform: translateX(0);
+	z-index: 99;
+	opacity: 1;
+}
+.right-animation{
+	position: relative;
+	z-index: -99;
+	transform: translateX(150px);
+	transition: 1s all ease;
+	transition-timing-function: ease-in-out;
+	opacity: 0;
+}
+.right-animation.active{
+	transform: translateX(0);
+	z-index: 99;
+	opacity: 1;
+}
+/* @keyframes headings{
+	0%{transform:rotate(0deg);}
+	45%{transform: rotate(-135deg);}
+	90%{transform: rotate(315deg);}
+	95%{position: relative; top: -10px;}
+	100%{top: 0;}
+}
+.headings-animations{
+	animation-name: headings;
+	animation-duration: 5s;
+} */
+.headings-animations{
+	animation: headings 5s;      
+	/* animation-iteration-count: infinite;       */
+ }
+ @keyframes headings{
+	0%{
+		transform: rotate(0deg);
+	}
+	45%{
+		transform: rotate(180deg);
+	}
+	90%{
+		transform: rotate(360deg);
+	}
+	95%{
+		transform: translateY(-20px);
+	}
+	100%{
+		transform: translateY(0);
+	}
+ }
+ .headings-animations.active{
+}
+.bottom-animation{
+	position: relative;
+	z-index: -99;
+	transform: translateY(200px);
+	transition: 2s all ease;
+}
+.bottom-animation.active{
+	transform: translateY(0);
+	z-index: 99;
+}
+.top-animation{
+	position: relative;
+	z-index: -99;
+	transform: translateY(-200px);
+	transition: 2s all ease;
+}
+.top-animation.active{
+	transform: translateY(0);
+	z-index: 99;
+}
